@@ -1,34 +1,25 @@
 # waypoint_navigator
 
-<p align="center"><img src="http://i.imgur.com/dDE4BA9.png" height="300"/>  <img src="http://i.imgur.com/Hl1lGQM.png" height="300"/></p>
-
-This repository contains high-level waypoint-following for micro aerial vehicles (MAVs).
-GPS/ENU co-ordinates are accepted as input destinations, and an illustrative example is provided in the [RotorS](https://github.com/ethz-asl/rotors_simulator/wiki) simulator.
+GPS/ENU co-ordinates are accepted as input destinations.
 This README provides a brief overview of the package and its utilities.
-
-Please feel free to contact us in case of questions, feedback, or feature ideas. We would love to hear your feedback in order to improve this package.
-
-**Authors**: Marija Popović, Enric Galceran, Raghav Khanna, Inkyu Sa  
-**Maintainer**: Marija Popović, mpopovic@ethz.ch  
-**Affiliation**: Autonomous Systems Lab, ETH Zurich
 
 ## Installation Instructions (Ubuntu)
 
-To install this package with [ROS Indigo](http://wiki.ros.org/indigo/Installation/Ubuntu) or [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu):
+To install this package with [ROS Melodic]:
 
-1. Install additional system dependencies (swap indigo for kinetic as necessary):
+1. Install additional system dependencies:
 
 ```
-sudo apt-get install python-wstool python-catkin-tools ros-indigo-cmake-modules
+sudo apt-get install python-wstool python-catkin-tools ros-melodic-cmake-modules
 ```
 
 2. Set up a catkin workspace (if not already done):
 
 ```
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws
+mkdir -p ~/ros1_ws/src
+cd ~/ros1_ws
 catkin init
-catkin config --extend /opt/ros/indigo
+catkin config --extend /opt/ros/melodic
 catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release
 catkin config --merge-devel
 ```
@@ -38,14 +29,11 @@ catkin config --merge-devel
 ```
 cd src
 wstool init
-wstool set --git waypoint_navigator git@github.com:ethz-asl/waypoint_navigator.git -y
-wstool update
-wstool merge waypoint_navigator/install/waypoint_navigator.rosinstall
-wstool update -j8
-echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+wstool merge waypoint_test/waypoint_navigator.rosinstall
+wstool update -j4
+echo "source ~/ros1_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
- > **Optional**: You can also install the [rviz_satellite](git@github.com:gareth-cross/rviz_satellite.git) package to visualize satellite maps in rviz for GPS co-ordinates.
  
 4. Use [catkin_build](http://catkin-tools.readthedocs.io/en/latest/verbs/catkin_build.html) to build the repository:
 
