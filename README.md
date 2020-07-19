@@ -28,6 +28,7 @@ catkin config --merge-devel
 
 ```
 cd src
+git clone https://github.com/pedropereira97/waypoint_test
 wstool init
 wstool merge waypoint_test/dependencies.rosinstall
 wstool update -j4
