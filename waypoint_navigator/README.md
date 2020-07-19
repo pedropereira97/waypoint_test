@@ -78,9 +78,9 @@ The coordinates ``.yaml`` file should read as an array of floating-point numbers
  
 ## Instructions
 
-1.In a command window, open ROS2 node.
+1. In a command window, open ROS2 node.
 
-2.In a new command window,open ROS2-ROS1 bridge (https://github.com/ros2/ros1_bridge).
+2. In a new command window,open ROS2-ROS1 bridge (https://github.com/ros2/ros1_bridge).
 
 3. In a new command window, type:
 
