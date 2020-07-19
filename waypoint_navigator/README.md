@@ -59,12 +59,8 @@ catkin build
 
 * `/execute_path` - start the mission
 * `/takeoff` - takeoff 
-* `/land` - land
-* `/abort_path` - stop sending waypoints
-
- > Note: Example request format for a call to `/go_to_waypoints`: `rosservice call /firefly/go_to_waypoints "points: [{x: 3.0, y: 6.0, z: 2.0}, {x: 2.0, y: 9.2, z: 2.1}]"`
- 
- > Note: The services `/go_to_waypoint` and `/go_to_waypoints` can be used to command the UAV to go to a target (x,y,z). The heading is set to in either the direction of the next waypoint or 0.0, depending on the mode specified in the initial file ('auto' for the former, 'fixed' or 'zero' for the latter).
+<--* `/land` - land
+* `/abort_path` - stop sending waypoints--!>
 
 ## Input Format
 
