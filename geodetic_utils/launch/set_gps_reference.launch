@@ -1,0 +1,6 @@
+<launch>
+  
+  <arg name="my_args" default="5 average"/>
+  <node name="set_gps_reference_node_telem" pkg="geodetic_utils" type="set_gps_reference_node_telem" clear_params="true" output="screen" args="$(arg my_args)"/>
+  
+</launch>

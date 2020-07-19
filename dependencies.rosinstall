@@ -1,0 +1,3 @@
+- git: {local-name: catkin_simple, uri: 'https://github.com/catkin/catkin_simple'} 
+- git: {local-name: glog_catkin, uri: 'https://github.com/ethz-asl/glog_catkin'}
+- git: {local-name: yaml_cpp_catkin, uri: 'https://github.com/ethz-asl/yaml_cpp_catkin'}

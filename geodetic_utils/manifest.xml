@@ -1,0 +1,12 @@
+<package>
+  <description brief="geodetic_utils">
+
+     geodetic_utils
+
+  </description>
+  <author>rotors</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/geodetic_utils</url>
+
+</package>
