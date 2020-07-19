@@ -12,7 +12,10 @@
     <node name="waypoint_navigator_node" pkg="waypoint_navigator" type="waypoint_navigator_node"  respawn="true" clear_params="true" output="screen">
       <rosparam file="$(find waypoint_navigator)/paths/trajectory_simple_enu.yaml"/>
       <remap from="telem" to="/telem"/>
-    </node>    
+    </node>
+    
+    <node pkg="rosbag" type="record" name="rosbag_record_telem"
+       args="-o $(find waypoint_navigator)/bags/default_record /telem" />    
   </group>
   
 </launch>
