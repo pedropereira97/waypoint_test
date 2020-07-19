@@ -107,5 +107,3 @@ The coordinates ``.yaml`` file should read as an array of floating-point numbers
  ```
  
  This begins execution of the path that was read from the file. You should see the MAV moving along the path.
-
-<p align="center"><img src="http://flourish-project.eu/fileadmin/bsdist/theme/img/flourish-logo-v5.svg" width="200" /></p>
