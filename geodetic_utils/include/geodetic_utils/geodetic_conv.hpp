@@ -176,39 +176,6 @@ class GeodeticConverter
     ecef2Geodetic(x, y, z, latitude, longitude, altitude);
   }
 
-  double Geo_distance(double lat1, double long1, double h1, double lat2, double long2, double h2) 
-{ 
-    // Convert the latitudes  
-    // and longitudes 
-    // from degree to radians. 
-    lat1 = deg2Rad(lat1); 
-    long1 = deg2Rad(long1); 
-    lat2 = deg2Rad(lat2); 
-    long2 = deg2Rad(long2); 
-      
-    // Haversine Formula 
-    long double dlong = long2 - long1; 
-    long double dlat = lat2 - lat1; 
-  
-    long double ans = pow(sin(dlat / 2), 2) +  
-                          cos(lat1) * cos(lat2) *  
-                          pow(sin(dlong / 2), 2); 
-  
-    ans = 2 * asin(sqrt(ans)); 
-  
-    // Radius of Earth in  
-    // Kilometers, R = 6371 
-    // Use R = 3956 for miles 
-    long double R = 6371; 
-      
-    // Calculate the result 
-    ans = ans * R; 
-
-    ans = sqrt(ans*ans + (h2-h1)*(h2-h1));
-  
-    return ans; 
-}
-
  private:
   inline Eigen::Matrix3d nRe(const double lat_radians, const double lon_radians)
   {
