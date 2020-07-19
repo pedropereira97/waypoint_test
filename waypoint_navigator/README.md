@@ -59,8 +59,8 @@ catkin build
 
 * `/execute_path` - start the mission
 * `/takeoff` - takeoff 
-<--* `/land` - land
-* `/abort_path` - stop sending waypoints--!>
+<!--* `/land` - land
+* `/abort_path` - stop sending waypoints-->
 
 ## Input Format
 
