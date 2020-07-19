@@ -256,8 +256,6 @@ void WaypointNavigatorNode::poseTimerCallback(const ros::TimerEvent&) {
 
   const double dist_to_end = sqrt((pos_x-target_x)*(pos_x-target_x) + (pos_y-target_y)*(pos_y-target_y) + (pos_z-target_z)*(pos_z-target_z));
 
-  ROS_INFO_STREAM(dist_to_end);
-
   if (current_leg_ != coarse_waypoints_.size() - 1 &&
       dist_to_end < kWaypointAchievementDistance) {
     if (current_leg_ == 0) {
