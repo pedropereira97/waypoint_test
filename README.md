@@ -100,7 +100,7 @@ The coordinates ``.yaml`` file should read as an array of floating-point numbers
 5. In a new command window, type:
 
  ```
- $ rosservice call /firefly/execute_path
+ $ rosservice call /friends_hexa/execute_path
  ```
  
  This begins execution of the path that was read from the file. You should see the MAV moving along the path.
